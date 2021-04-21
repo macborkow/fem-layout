@@ -35,8 +35,6 @@ div img {
 [class*="row-"] {
   width: 80%;
   margin: 0 auto;
-  border: 1px black solid;
-  background-color: aquamarine;
 }
 
 [class*="row-"]::after {
@@ -54,17 +52,16 @@ div img {
 @media only screen and (min-width: 480px) {
   [class*="row-"] article {
     background-color: burlywood;
+    float: left;
+    margin-left: 2%;
+    width: 96%;
   }
   .row-1 article {
     width: 47%;
-    float: left;
-    margin-left: 2%;
   }
 
   .row-2 article {
     width: 47%;
-    float: left;
-    margin-left: 2%;
   }
 }
 
@@ -72,24 +69,20 @@ div img {
 @media only screen and (min-width: 768px) {
   [class*="row-"] article {
     background-color: pink;
+    float: left;
+    margin-left: 2%;
   }
 
   .row-1 article {
     width: 22.5%;
-    float: left;
-    margin-left: 2%;
   }
 
   .row-2 article {
     width: 47%;
-    float: left;
-    margin-left: 2%;
   }
 
   .row-3 article {
     width: 71%;
-    float: left;
-    margin-left: 2%;
   }
 
   .row-3 article:last-child {
@@ -98,6 +91,5 @@ div img {
 
   .row-4 article {
     width: 96%;
-    margin-left: 2%;
   }
 }
