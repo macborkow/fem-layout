@@ -1,0 +1,81 @@
+/* Border box declaration 
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after
+ */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, Geneva, sans-serif;
+}
+a {
+  color: #2772b0;
+}
+.wrapper {
+  width: 97%;
+  max-width: 1200px;
+  margin: 0 auto;
+  float: none;
+  background-color: #fff;
+}
+
+div img {
+  width: 100%;
+  max-width: 225px;
+}
+
+/* grid system -- mobile first! */
+
+[class*="row-"] {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px black solid;
+}
+[class*="row-"]::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px) {
+}
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+	.row-1 article {
+		width: 22.5%;
+		float: left;
+		margin-left: 2%;
+		background-color: pink;
+	}
+
+	.row-2 article {
+		width: 47%;
+		float: left;
+		margin-left: 2%;
+		background-color: pink;
+	}
+
+	.row-3 article {
+		width: 71%;
+		float: left;
+		margin-left: 2%;
+		background-color: pink;
+	}
+
+	.row-3 article:last-child {
+		width: 23%;
+	}
+
+	.row-4 article {
+		width: 96%;
+		background-color: pink;
+		margin-left: 2%;
+	}
+}
